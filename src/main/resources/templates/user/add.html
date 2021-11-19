@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.thymeleaf.org/thymeleaf-extras-shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>增加</title>
+</head>
+<body>
+<h2>add</h2>
+<form th:action="@{/addOne}" method="post">
+    name:<input type="text"  name="name"/>
+    password:<input type="text" name="password"/>
+    prems:<input type="text" name="prems"/>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

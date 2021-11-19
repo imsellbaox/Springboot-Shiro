@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.thymeleaf.org/thymeleaf-extras-shiro">
+<head>
+    <meta charset="UTF-8">
+    <title>shiro</title>
+</head>
+<body>
+<h1>首页</h1>
+
+<p th:text="${msg}"></p>
+<hr>
+<h3 th:if="${session.userExist==null}">
+<a th:href="@{/tologin}">登录</a>
+</h3>
+<h3 th:if="${session.userExist!=null}">
+    <a th:href="@{/tologin}">注销</a>
+</h3>
+<div shiro:hasPermission="add" >
+    <a th:href="@{/user/add}">add</a>
+</div>
+
+<div shiro:hasPermission="update">
+    <a th:href="@{/user/update}">update</a>
+</div>
+
+</body>
+</html>

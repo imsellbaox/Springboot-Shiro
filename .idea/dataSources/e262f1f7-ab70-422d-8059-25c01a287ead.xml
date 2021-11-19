@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.3">
+    <root id="1"/>
+    <schema id="2" parent="1" name="batis">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="how2java"/>
+    <schema id="4" parent="1" name="hutubill"/>
+    <schema id="5" parent="1" name="information_schema"/>
+    <schema id="6" parent="1" name="love"/>
+    <schema id="7" parent="1" name="mysql"/>
+    <schema id="8" parent="1" name="performance_schema"/>
+    <schema id="9" parent="1" name="test"/>
+    <schema id="10" parent="1" name="tmall_springboot"/>
+    <table id="11" parent="2" name="blog"/>
+    <table id="12" parent="2" name="department"/>
+    <table id="13" parent="2" name="employee"/>
+    <table id="14" parent="2" name="net_book"/>
+    <table id="15" parent="2" name="shirouser"/>
+    <table id="16" parent="2" name="student"/>
+    <table id="17" parent="2" name="teacher"/>
+    <table id="18" parent="2" name="user"/>
+    <column id="19" parent="11" name="id">
+      <Position>1</Position>
+      <Comment>博客id</Comment>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="20" parent="11" name="title">
+      <Position>2</Position>
+      <Comment>博客标题</Comment>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="21" parent="11" name="author">
+      <Position>3</Position>
+      <Comment>博客作者</Comment>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="22" parent="11" name="create_time">
+      <Position>4</Position>
+      <Comment>创建时间</Comment>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="23" parent="11" name="views">
+      <Position>5</Position>
+      <Comment>浏览量</Comment>
+      <DataType>int(30)|0</DataType>
+    </column>
+    <column id="24" parent="12" name="dp_id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="25" parent="12" name="dp_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="26" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>dp_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="27" parent="13" name="em_id">
+      <Position>1</Position>
+      <DataType>int(10) unsigned|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="28" parent="13" name="em_name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="13" name="em_email">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+    </column>
+    <column id="30" parent="13" name="em_gender">
+      <Position>4</Position>
+      <DataType>char(1)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="13" name="em_deid">
+      <Position>5</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="13" name="em_birth">
+      <Position>6</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="33" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>em_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="14" name="bookID">
+      <Position>1</Position>
+      <Comment>id</Comment>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="35" parent="14" name="bookName">
+      <Position>2</Position>
+      <Comment>书名</Comment>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="14" name="bookCounts">
+      <Position>3</Position>
+      <Comment>数量</Comment>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="14" name="bookDtail">
+      <Position>4</Position>
+      <Comment>描述</Comment>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="38" parent="14" name="bookID">
+      <ColNames>bookID</ColNames>
+    </index>
+    <column id="39" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="40" parent="15" name="name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="15" name="password">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="15" name="prems">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="43" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="44" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="16" name="name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="46" parent="16" name="tid">
+      <Position>3</Position>
+      <DataType>int(10)|0</DataType>
+    </column>
+    <index id="47" parent="16" name="fktid">
+      <ColNames>tid</ColNames>
+    </index>
+    <key id="48" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="49" parent="16" name="fktid">
+      <ColNames>tid</ColNames>
+      <RefSchemaName>batis</RefSchemaName>
+      <RefTableName>teacher</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="50" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>int(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="51" parent="17" name="name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <key id="52" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="53" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>int(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="54" parent="18" name="name">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="55" parent="18" name="pwd">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <key id="56" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
